@@ -7,10 +7,14 @@ var mysql = require('mysql');
 var server = http.createServer( page);
 
 function page(req, res){
-    if(req.url == '/abc'){
+    if(req.url == '/hola'){
         console.log('create a server')
         res.end('ready');
     }//end if
+    else if(req.url == '/mysql')  {
+        traerMysql(req, res);
+    }
+    
     else{
         res.end('not exist');
     }
