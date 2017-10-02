@@ -30,9 +30,10 @@ var connection = mysql.createConnection({
 
 })
 
+//connection.connect(); why? still working when marked
 
 function traerMysql(requesst, response){
-var query = connection.query(' select * from call',
+var query = connection.query(' select * from calls',
  function(error, result){
      if (error) {throw error}
      else {
