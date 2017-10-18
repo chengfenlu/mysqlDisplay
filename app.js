@@ -77,7 +77,7 @@ app.get('/getposts', (req, res) => {
 });
 
 app.get('/top', (req, res) => {
-    let sql = 'SELECT  * FROM calls ORDER BY id DESC LIMIT 20';
+    let sql = 'SELECT  id, room, bed, urgency, date FROM calls ORDER BY id DESC LIMIT 20';
     let query = db.query(sql, (err, results) => {
         if(err) throw err;
         console.log('Recent calls fetched...');
