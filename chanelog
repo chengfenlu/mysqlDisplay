@@ -1,0 +1,2 @@
+port 3001
+res.json ( looks better than res.send)
