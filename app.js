@@ -72,7 +72,7 @@ app.get('/getposts', (req, res) => {
     let query = db.query(sql, (err, results) => {
         if(err) throw err;
         console.log('Total calls fetched...');
-        res.send(results);
+        res.JSON(results);
     });
 });
 
@@ -90,7 +90,7 @@ app.get('/room22', (req, res) => {
     let query = db.query(sql, (err, results) => {
         if(err) throw err;
         console.log('Recent calls fetched...');
-        res.send(results);
+        res.json(results);
     });
 });
 

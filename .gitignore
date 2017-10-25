@@ -2,3 +2,4 @@
 build
 app/vendor
 node_modules
+bower_components
